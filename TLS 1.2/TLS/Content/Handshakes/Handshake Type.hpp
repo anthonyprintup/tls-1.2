@@ -1,0 +1,24 @@
+#pragma once
+
+namespace tls::handshakes {
+	/* 8 bit unsigned integer */
+	enum struct HandshakeType {
+		HELLO_REQUEST,
+		CLIENT_HELLO,
+		SERVER_HELLO,
+		HELLO_VERIFY_REQUEST,
+		NEW_SESSION_TICKET,
+		END_OF_EARLY_DATA,
+		HELLO_RETRY_REQUEST,
+		ENCRYPTED_EXTENSION = 8,
+		CERTIFICATE         = 11,
+		SERVER_KEY_EXCHANGE,
+		CERTIFICATE_REQUEST,
+		SERVER_HELLO_DONE,
+		CERTIFICATE_VERIFY,
+		CLIENT_KEY_EXCHANGE,
+		FINISHED            = 20,
+		KEY_UPDATE          = 24,
+		MESSAGE_HASH        = 254
+	};
+}
